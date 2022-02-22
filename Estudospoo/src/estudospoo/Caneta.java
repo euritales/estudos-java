@@ -3,8 +3,8 @@ public class Caneta {
     public String modelo;
     public String cor;
     private float ponta;
-    int carga;
-    boolean tampada;
+    protected int carga;
+    private boolean tampada;
     
     public void status(){
         System.out.println("Cor: " + this.cor);
@@ -30,7 +30,7 @@ public class Caneta {
         };
     }
     
-    void tampar(){
+    protected void tampar(){
         if(this.tampada == true){
             System.out.println("Caneta já tampada");
         }else{
@@ -39,7 +39,7 @@ public class Caneta {
         }
        
     }
-    void destampar(){
+    protected void destampar(){
         if(this.tampada == false){
             System.out.println("Caneta já destampada");
         }else{
